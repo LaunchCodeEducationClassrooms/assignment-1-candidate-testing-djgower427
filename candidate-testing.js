@@ -46,7 +46,7 @@ function gradeQuiz(candidateAnswers) {
   // TODO 1.2c: Let the candidate know if they have answered the question correctly or incorrectly // 
 
 console.log(`
-
+Candidate Name: ${candidateName}
 1.) ${questions[0]}
 Your answer: ${candidateAnswers[0]}
 Correct answer: ${correctAnswers[0]}

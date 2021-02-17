@@ -72,11 +72,11 @@ Correct answer: ${correctAnswers[4]}
 
 grade = 0;
 
-if (candidateAnswers[0]===correctAnswers[0])  {
+if (candidateAnswers[0].toLowerCase()===correctAnswers[0].toLowerCase())  {
   grade = grade+1
 }
 
-if (candidateAnswers[1]===correctAnswers[1])  {
+if (candidateAnswers[1].toLowerCase()===correctAnswers[1].toLowerCase())  {
   grade = grade+1
 }
 
@@ -84,7 +84,7 @@ if (candidateAnswers[2]===correctAnswers[2])  {
   grade = grade+1
 }
 
-if (candidateAnswers[3]===correctAnswers[3])  {
+if (candidateAnswers[3].toLowerCase()===correctAnswers[3].toLowerCase())  {
   grade = grade+1
 }
 

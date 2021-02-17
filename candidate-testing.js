@@ -22,22 +22,22 @@ let correctAnswers = [
   "Trajectory",
   "3",
 ];
-let candidateAnswers =[];
+let candidateAnswers = [];
 
 
 function askForName() {
   // TODO 1.1b: Ask for candidate's name //
-candidateName = input.question("What is your name? ");
+  candidateName = input.question("What is your name? ");
 }
 
 function askQuestion() {
   // TODO 1.2b: Ask candidate the question and assign the response as candidateAnswer //
 
 
-for (let i = 0; i < questions.length ; i++) {
-  candidateAnswers.push(input.question(questions[i]));
-}
-
+  for (let i = 0; i < questions.length; i++) {
+    candidateAnswers.push(input.question(questions[i]));
+  }
+  
 
 }
 
@@ -45,7 +45,8 @@ function gradeQuiz(candidateAnswers) {
 
   // TODO 1.2c: Let the candidate know if they have answered the question correctly or incorrectly // 
 
-console.log(`
+  console.clear();
+  console.log(`
 Candidate Name: ${candidateName}
 1.) ${questions[0]}
 Your answer: ${candidateAnswers[0]}
@@ -70,37 +71,37 @@ Correct answer: ${correctAnswers[4]}
 
   let grade;
 
-grade = 0;
+  grade = 0;
 
-if (candidateAnswers[0].toLowerCase()===correctAnswers[0].toLowerCase())  {
-  grade = grade+1
-}
+  if (candidateAnswers[0].toLowerCase() === correctAnswers[0].toLowerCase()) {
+    grade = grade + 1
+  }
 
-if (candidateAnswers[1].toLowerCase()===correctAnswers[1].toLowerCase())  {
-  grade = grade+1
-}
+  if (candidateAnswers[1].toLowerCase() === correctAnswers[1].toLowerCase()) {
+    grade = grade + 1
+  }
 
-if (candidateAnswers[2]===correctAnswers[2])  {
-  grade = grade+1
-}
+  if (candidateAnswers[2] === correctAnswers[2]) {
+    grade = grade + 1
+  }
 
-if (candidateAnswers[3].toLowerCase()===correctAnswers[3].toLowerCase())  {
-  grade = grade+1
-}
+  if (candidateAnswers[3].toLowerCase() === correctAnswers[3].toLowerCase()) {
+    grade = grade + 1
+  }
 
-if (candidateAnswers[4]===correctAnswers[4])  {
-  grade = grade+1
-}
+  if (candidateAnswers[4] === correctAnswers[4]) {
+    grade = grade + 1
+  }
 
-let status = "";
+  let status = "";
 
-if (grade >= 4) {
+  if (grade >= 4) {
     status = "PASSED"
   } else {
     status = "FAILED"
   }
 
-console.log (`>>> Overall Grade: ${grade / 5 * 100}% (${grade} of 5 responses correct <<<
+  console.log(`>>> Overall Grade: ${grade / 5 * 100}% (${grade} of 5 responses correct <<<
 >>> Status: ${status} <<<`);
 
 

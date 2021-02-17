@@ -7,17 +7,17 @@ let candidateName = "";
 // TODO 1.2a: Define question, correctAnswer, and candidateAnswer //
 let question = "Who was the first American woman in space? ";
 let correctAnswer = "Sally Ride";
-let candidateAnswer;
+let candidateAnswer ="";
 let questions = [
   "Who was the first American woman in space? ",
-  "True or false: 5000 meters = 5 kilometers. ",
+  "True or false: 5 kilometer == 5000 meters? ",
   "(5 + 3)/2 * 10 = ? ",
   "Given the array [8, 'Orbit', 'Trajectory', 45], what entry is at index 2? ",
   "What is the minimum crew size for the ISS? ",
 ];
 let correctAnswers = [
   "Sally Ride",
-  "True",
+  "true",
   "40",
   "Trajectory",
   "3",
@@ -74,34 +74,34 @@ Correct answer: ${correctAnswers[4]}
   grade = 0;
 
   if (candidateAnswers[0].toLowerCase() === correctAnswers[0].toLowerCase()) {
-    grade = grade + 1
+    grade = grade + 20
   }
 
   if (candidateAnswers[1].toLowerCase() === correctAnswers[1].toLowerCase()) {
-    grade = grade + 1
+    grade = grade + 20
   }
 
   if (candidateAnswers[2] === correctAnswers[2]) {
-    grade = grade + 1
+    grade = grade + 20
   }
 
   if (candidateAnswers[3].toLowerCase() === correctAnswers[3].toLowerCase()) {
-    grade = grade + 1
+    grade = grade + 20
   }
 
   if (candidateAnswers[4] === correctAnswers[4]) {
-    grade = grade + 1
+    grade = grade + 20
   }
 
   let status = "";
 
-  if (grade >= 4) {
+  if (grade >= 80) {
     status = "PASSED"
   } else {
     status = "FAILED"
   }
 
-  console.log(`>>> Overall Grade: ${grade / 5 * 100}% (${grade} of 5 responses correct <<<
+  console.log(`>>> Overall Grade: ${grade}% (${grade/20} of 5 responses correct <<<
 >>> Status: ${status} <<<`);
 
 
